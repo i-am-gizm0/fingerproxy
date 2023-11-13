@@ -1,5 +1,5 @@
-import { FlowConfig } from ".";
-import { execute } from "./flow";
+import { FlowConfig } from '.';
+import { execute } from './flow';
 
 export function serve(flow: FlowConfig): void {
     const server = Bun.serve({
@@ -10,6 +10,6 @@ export function serve(flow: FlowConfig): void {
             }
             return await execute(flow, request);
         },
-    })
+    });
     console.log(`Listening on ${server.hostname}:${server.port}`);
 }

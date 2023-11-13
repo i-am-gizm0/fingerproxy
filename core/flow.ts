@@ -1,6 +1,9 @@
-import { FlowConfig } from "./types/config";
+import { FlowConfig } from './types/config';
 
-export async function execute(flow: FlowConfig, req: Request): Promise<Response> {
+export async function execute(
+    flow: FlowConfig,
+    req: Request,
+): Promise<Response> {
     console.debug(`Executing flow in response to ${req.url}`);
     const context = new Map<symbol, unknown>();
     let response = new Response(null, { status: 404 });

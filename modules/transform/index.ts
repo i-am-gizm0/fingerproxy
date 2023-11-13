@@ -1,3 +1,3 @@
-import addLink from "./addLink";
+import addLink from './addLink';
 
 export { addLink };
